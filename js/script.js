@@ -31,10 +31,22 @@ function calculateSetup() {
         software = "Use Fabric or Forge for modded gameplay.";
     }
 
+    // Performance rating (MUST be inside function)
+    let rating = "";
+
+    if (recommendedRam >= 6) {
+        rating = "High Performance Server 🟢";
+    } else if (recommendedRam >= 4) {
+        rating = "Moderate Performance 🟡";
+    } else {
+        rating = "Basic Server Only 🔴";
+    }
+
     document.getElementById("result").innerHTML =
-        "<strong>Minecraft Version:</strong> " + version + "<br><br>"
+        "<strong>Minecraft Version:</strong> " + version + "<br><br>" +
         "<strong>Recommended RAM Allocation:</strong> " + recommendedRam + "GB<br><br>" +
         "<strong>Suggested Software:</strong> " + software + "<br><br>" +
+        "<strong>Performance Rating:</strong> " + rating + "<br><br>" +
         "<strong>Launch Command:</strong><br>" +
         "java -Xmx" + recommendedRam + "G -Xms" + recommendedRam + "G -jar server.jar nogui";
 }
