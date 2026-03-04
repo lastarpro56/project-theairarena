@@ -1,0 +1,145 @@
+body {
+    font-family: Arial;
+    background-color: #111827;  /* lighter dark */
+    color: white;
+    margin: 0;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    padding: 25px;
+}
+
+nav {
+    background: #111827;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #00c6ff;
+}
+
+.tool {
+    margin-top: 40px;
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 30px;
+    background: #1f2937;   /* darker than cards, lighter than old */
+}
+
+.hero {
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 32px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px;
+}
+
+.card {
+    background: #374151;   /* much lighter */
+    padding: 25px;
+    width: 260px;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    color: #00c6ff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #e5e7eb;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #1f2937;
+}
+
+.divider {
+    width: 60%;
+    margin: 40px auto;
+    border: 1px solid #1f2937;
+}
+
+/* Fade in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+}
